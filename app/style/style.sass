@@ -1,0 +1,330 @@
+$main-color: #f9f9f9
+$font-color-dark: #c9c9c9
+$font-color-table-grey: #828282
+$font-color-buttons: #a4a4a4
+$orange-color: #ff801a
+$button-padding: 4px 10px 7px 10px
+
+body
+  margin: auto
+  background-color: $main-color
+  .navi
+    background-color: #ffffff
+    border-bottom: 1px solid #e1e1e1
+
+  nav
+    margin: 0 auto 0 auto
+    max-width: 978px
+    background-color: #ffffff
+    padding-top: 34px
+
+    ul
+      position: relative
+      font-weight: bold
+      list-style-type: none
+      display: flex
+      flex-direction: row
+      font-size: 14px
+      padding: 0
+      padding-bottom: 15px
+      color: #7c7c7c
+      @media (max-width: 977px)
+        justify-content: space-between
+
+      li
+        cursor: pointer
+        transition: 100ms
+      li:hover
+        color: $orange-color
+      li:hover:after
+        content: ''
+        border-bottom: solid 2px #ffc79a
+        width: 25px
+        display: block
+        margin: auto
+      li:first-child
+        @media (min-width: 978px)
+          margin-left: 150px
+          margin-right: 30px
+        color: $orange-color
+
+      li:first-child:after
+        content: ''
+        border-bottom: solid 2px #ffc79a
+        width: 25px
+        display: block
+        margin: auto
+
+      li:nth-child(2)
+        @media (min-width: 978px)
+          margin-right: 30px
+
+      li:nth-child(3)
+        @media (min-width: 978px)
+          margin-right: 417px
+
+      .user-photo
+        background-image: url("../images/Olivia-Wilde.png")
+        width: 34px
+        height: 34px
+        background-repeat: no-repeat
+        @media (max-width: 977px)
+          display: none
+        @media (min-width: 978px)
+          position: absolute
+          top: -8px
+          left: 805px
+      .user-photo:hover:after
+        border: none
+
+      li:last-child
+        font-size: 15px
+        font-weight: normal
+        img
+          padding-left: 10px
+
+
+main
+  max-width: 978px
+  border-top: 1px solid #f1f1f1
+  margin-left: auto
+  margin-right: auto
+
+  header
+    display: flex
+    @media (max-width: 977px)
+      flex-direction: column
+    section.col-lg-4
+      padding-right: 0
+      padding-left: 0
+      @media (max-width: 977px)
+        text-align: center
+
+  .text-progress-bar
+    font-size: 9px
+    color: $font-color-dark
+    display: inline-block
+    width: 100%
+
+  .text-protein
+    @media (min-width: 978px)
+      margin-left: 7px
+
+  .carousel-item
+    text-align: center
+    color: $orange-color
+    font-size: 48px
+  .carousel
+    @media (max-width: 977px)
+      order: 3
+  .protein
+    @media (max-width: 977px)
+      order: 2
+    @media (min-width: 978px)
+      margin-left: 85px
+    img
+      margin-left: 8px
+      margin-right: 8px
+    img:first-child
+      margin-left: 0
+      margin-right: 5px
+    img:last-child
+      margin-left: 4px
+      margin-right: 0
+
+  table.stacktable.small-only
+    margin: auto
+    th
+      text-align: center
+    td.st-key
+      font-weight: bold
+      border-right: 2px solid $font-color-table-grey
+  .table
+    border: none
+
+    .table-margin
+      background-image: url("../images/table-background.png")
+      text-align: center
+
+    thead
+      color: #adbb0c
+      font-size: 24px
+
+
+      th
+        border: 2px solid #e9e9e9
+        border-top: none
+        text-align: center
+        font-weight: normal
+        height: 50px
+
+      th:first-child
+        border-bottom: none
+      th:last-child
+        border-right: none
+      th.grey-l
+        border-right: none
+      th.orange1
+        border-top: 2px solid $orange-color
+        border-left: 2px solid $orange-color
+        border-right: 2px solid $orange-color
+
+    tbody
+      font-size: 13px
+      color: $font-color-table-grey
+      .table-margin
+        border-bottom: 2px solid #dddddd
+        width: 85px
+      td
+        border: 2px solid #e9e9e9
+        width: 126px
+        height: 90px
+        position: relative
+      td:first-child
+        vertical-align: middle
+        border-top: none
+      td:last-child
+        border-right: none
+      td.orange2
+        border-right: 2px solid $orange-color
+        border-left: 2px solid $orange-color
+        color: black
+      td.grey-l
+        border-right: none
+      .table-margin-last
+        border-bottom: none
+      .bode-drink
+        background-image: url("../images/bode-drink.png")
+        background-repeat: no-repeat
+        background-position: bottom
+      .color
+        background-image: url("../images/bode-drink-color.png")
+        background-repeat: no-repeat
+        background-position: bottom
+      .check-meal
+        position: absolute
+        right: 6px
+        top: 6px
+
+
+      .free
+        font-size: 35px
+        position: relative
+        .free-text
+          color: #c2c2c2
+          width: 300px
+          position: absolute
+          left: -89px
+          top: 142px
+          display: block
+          -webkit-transform: rotate(270deg)
+          -moz-transform: rotate(270deg)
+          -ms-transform: rotate(270deg)
+          -o-transform: rotate(270deg)
+          transform: rotate(270deg)
+        img
+          position: absolute
+          top: 359px
+          left: 49px
+
+    tfoot
+      font-size: 11px
+      text-align: center
+      vertical-align: middle
+      color: $font-color-table-grey
+      tr:last-child
+        border-top: 2px solid #dddddd
+      td
+        border-right: 2px solid #dddddd
+        height: 35px
+        position: relative
+      tr
+        td:first-child
+          border: none
+        td:last-child
+          border: none
+
+      .print
+        font-size: 18px
+        vertical-align: middle
+      .check
+        position: absolute
+        top: 16px
+        right: 33px
+      td.orange2
+        border-right: 2px solid $orange-color
+        border-left: 2px solid $orange-color
+      td.orange3
+        border-left: 2px solid $orange-color
+        border-right: 2px solid $orange-color
+        border-bottom: 2px solid $orange-color
+      td.grey-l
+        border-right: none
+
+  footer
+    display: flex
+    @media (max-width: 977px)
+      flex-direction: column
+      article.col-12
+        padding-bottom: 15px
+        padding-top: 15px
+        border-bottom: 1px solid #e1e1e1
+    @media (min-width: 978px)
+      max-width: 978px
+      margin: 45px 0 100px 0
+
+      article.col-lg-4
+        padding-left: 50px
+        border-left: 1px solid #e1e1e1
+      article:last-child
+        padding-left: 40px
+      article:nth-child(2)
+        left: -17px
+      article:first-child
+        border-left: none
+        padding-left: 0
+        padding-right: 30px
+        width: 300px
+
+
+    .footer-button
+      padding: $button-padding
+      background-repeat: no-repeat
+      cursor: pointer
+      font-size: 16px
+      color: $font-color-buttons
+    .footer-button:hover
+      zoom: 105%
+
+    .buy-now-button
+      background-image: url("../images/buy-now-button.png")
+      width: 108px
+
+    .faq-button
+      background-image: url("../images/read-faq-button.png")
+      width: 128px
+
+    .apple-button
+      display: flex
+      background-image: url("../images/apple-button.png")
+      width: 97px
+      padding-left: 40px
+      float: left
+
+    .android-button
+      background-image: url("../images/android-button.png")
+      width: 127px
+      padding-left: 37px
+      margin-left: 12px
+      float: left
+
+  .stacktable.large-only
+    display: table
+  .stacktable.small-only
+    display: none
+
+  @media (max-width: 977px)
+    .stacktable.large-only
+      display: none
+    .stacktable.small-only
+      display: table
